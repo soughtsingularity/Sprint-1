@@ -13,6 +13,8 @@ html, body {
 .content{
     padding: 10px;
     background-color: orangered;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 #container{
@@ -204,11 +206,25 @@ html, body {
     #sub_container_2_2 {
         width: 100%; 
         gap: 10px;
-        padding: 10px;      
-        display: flex;
-        flex-direction: column; 
         background-color: gray;
     }
+
+    #sub_container_2_1_1, 
+    #sub_container_2_1_2{
+    width: 100%;
+    padding:10px;
+    gap: 10px;      
+    display: flex;
+    flex-direction: column;
+}
+
+    #box_5,
+    #box_6,
+    #box_7,
+    #box_8{
+
+    width: 100%;
+}
 
 }
 
