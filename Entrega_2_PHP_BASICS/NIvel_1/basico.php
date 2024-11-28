@@ -19,7 +19,7 @@
     $string = "Soy un string";
     $boolean = false;
 
-    const NOM = "Ramón Martos Oliver";
+    define("NOM", "Ramón Martos OLiver");
 
     echo "<h1>".NOM."</h1>";
 
@@ -106,7 +106,7 @@
 
     echo "<h2>b)</h2>";
 
-    function calculadora(float $num1, float $num2, string $operator){
+    function calcular(float $num1, float $num2, string $operator): String{
 
         switch($operator){
             case "+":
@@ -119,7 +119,7 @@
 
             case "/":
                 if($num2 == 0){
-                    echo "No se puede dividir por 0";
+                    $resultado = "No se puede dividir por 0";
                 }else{
                     $resultado = $num1 / $num2;
                 }
@@ -130,17 +130,17 @@
                 break;
 
             default:
-                echo "Opcion incorrecta";
+                $resultado = "Opcion incorrecta";
         }
 
-        echo "<h2>".$resultado."</h2>";
+        return "<h2>".$resultado."</h2>";
 
     }
 
-    // calculadora(2,0,'/');
-    // calculadora(2,2,'*');
-    // calculdora(2,2,'+');
-    // calculadora(2,2,'-')
+    // echo calcular(2,0,'/');
+    // echo calcular(2,2,'*');
+    // echo calcular(2,2,'+');
+    // echo calcular(2,2,'-');
 
 
     /*- Exercici 4
@@ -156,16 +156,15 @@
         echo "Contando hasta ".$numero." en itervalos de ".$paso;
         echo "<br>";
         $resultado = "";
-        for($i = 1; $i <= $numero; $i++){
-            if($i % $paso == 0){
+        for($i = $paso; $i <= $numero; $i += $paso){
                 $resultado .=  "$i " ;
-            }
+            
 
         }
         return $resultado;
     }
 
-    //echo contador(10,paso: 3);
+    // echo contador(10,paso: 3);
 
     /* Exercici 5
     Escriure una funció per verificar el grau d'un/a estudiant d'acord amb la nota.
@@ -184,9 +183,9 @@ echo "<h1>Ex 5 </h1>";
 
         if($nota >= 60){
             $grado = "Primera division";
-        }else if($nota >=45 && $nota <=59){
+        }else if($nota >=45){
             $grado = "Segunda división";
-        }else if($nota >= 33 && $nota <= 44){
+        }else if($nota >= 33){
             $grado = "Tercera división";
         }else{
             $grado = "No obtenido. El estudiante reprobará";
@@ -205,7 +204,7 @@ echo "<h1>Ex 5 </h1>";
 
     function isBitten(){
 
-        return rand(0,1) ? false : true;
+        return rand(0,1) ? "Charlie no te ha mordido" : "Charlie te ha moridido";
     }
 
     echo isBitten();
