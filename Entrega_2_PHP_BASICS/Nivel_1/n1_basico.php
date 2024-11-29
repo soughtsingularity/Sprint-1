@@ -176,7 +176,7 @@
     Si la nota està entre 33% to 44%, el grau hauria de ser Tercera Divisió.
     Si la nota és menor a 33%, l'estudiant reprovarà.
 */ 
-echo "<h1>Ex 5 </h1>";
+    echo "<h1>Ex 5 </h1>";
 
 
     function gradoEstudiante(float $nota){
