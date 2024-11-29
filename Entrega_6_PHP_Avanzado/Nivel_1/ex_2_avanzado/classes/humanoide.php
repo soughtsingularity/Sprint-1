@@ -11,7 +11,7 @@ class Humanoide{
         $this->behavior = $behavior;
     }
 
-    public function showFunctionMetod(){
+    public function showFunctionInfo(): void{
 
         echo "<p>El nombre de la clase es: ".__CLASS__. "</p>";
         echo "<p>El nombre de la función es: ". __FUNCTION__."</p>";
@@ -19,12 +19,3 @@ class Humanoide{
 
     }
 }
-
-$humanoide = new Humanoide(19, "Earth", "Easy");
-
-$humanoide->showFunctionMetod();
-
-echo "<p>Estamos en la linea: ".__LINE__."</p>"
-
-
-?>

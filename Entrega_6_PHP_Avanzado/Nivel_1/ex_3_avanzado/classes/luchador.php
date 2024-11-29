@@ -10,12 +10,16 @@ class Luchador{
         $this->weapon = null;
     }
 
-    public function setWeapon($weapon){
+    public function getName(): mixed{
+        return $this->name;
+    }
+
+    public function setWeapon($weapon): void{
         $this->weapon = $weapon;
     }
 
-    public function goArena(){
-        echo "Luchador ".$this->name. " inscrito en el combate";
+    public function goArena(): void{
+        echo "Luchador ".$this->name. " inscrito en el combate con arma: " .$this->weapon;
     }
 
     public function __serialize(): array{
@@ -29,9 +33,9 @@ class Luchador{
         ];
     }
 
-    public function __unserialize($data){
+    public function __unserialize($data): void{
         if(!isset($data['name'], $data['level'], $data['origin'], $data['mana'], $data['weapon'])){
-            throw new InvalidArgumentException("Estas de la olla, te faltan datos, no serialices cosas que no son de serializar. Fatal error.");
+            throw new InvalidArgumentException(message: "Estas de la olla, te faltan datos, no serialices cosas que no son de serializar. Fatal error.");
         }else{
             $this->name = $data['name'];
             $this->level = $data['level'];
@@ -43,22 +47,3 @@ class Luchador{
         }
     }
 }
-
-$luchador1 = new Luchador('Odor', 30, "Earth", 40);
-$luchador1->setWeapon("Gun");
-$luchador2 = new Luchador('Loki', 55, "Mars", 15);
-
-try{
-
-    $inscripcion = serialize($luchador1);
-    unserialize($inscripcion) ;
-    echo "<br>";
-    $inscripcion = serialize($luchador2);
-    unserialize($inscripcion) ;
-
-} catch(InvalidArgumentException $e){
-    echo $e->getMessage();
-}
-
-
-?>

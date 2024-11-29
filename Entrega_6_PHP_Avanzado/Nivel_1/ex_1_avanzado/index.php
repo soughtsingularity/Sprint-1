@@ -16,5 +16,11 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         echo '<a href="n1_avanzado.html">Volver</a>';
     }
 }
+
+/*
+    Iba a hacer lo siguiente -> $nombre = $_POST['nombre']; para mostrar a través del echo la variable $nombre, pero el enunciado
+    me ha hecho dudar de si se quería mostrar el nombre introducido en el formulario expresamente usando $_POST['nombre]
+*/
 ?>
+
     
