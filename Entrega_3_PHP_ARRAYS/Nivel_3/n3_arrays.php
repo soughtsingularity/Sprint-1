@@ -27,7 +27,7 @@ $evenNames = array_filter(array: $stringArray, callback: function($name): bool{
     return strlen(string: $name) % 2 == 0;
 });
 
-print_r($evenNames);
+print_r(value: $evenNames);
 
 /* Ejercicio 3
     Donat un array d’enters, fes un programa que ens retorni la suma dels enters de l’array que siguin primers fent servir la funció array_reduce().

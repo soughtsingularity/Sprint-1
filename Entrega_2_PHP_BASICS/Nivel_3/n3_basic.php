@@ -64,7 +64,7 @@ function listNums($number): array{
 
     for($i = 2; $i <=$number; $i++){
 
-        array_push($numbers,$i);
+        array_push(array: $numbers,values: $i);
 
     }
 
@@ -72,9 +72,9 @@ function listNums($number): array{
 
 }
 
-function findPrime($number){
+function findPrime($number): array{
 
-    $numbers = listNums($number);
+    $numbers = listNums(number: $number);
     $index = 0;
 
     while($numbers[$index]**2 <= $number){
@@ -87,11 +87,11 @@ function findPrime($number){
             }
         }
 
-        $numbers = array_values($numbers);
+        $numbers = array_values(array: $numbers);
         $index++;
     }
 
     return $numbers;
 }
 
-print_r(findPrime(20));
+print_r(value: findPrime(number: 20));

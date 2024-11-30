@@ -15,10 +15,10 @@
     $array = [];
 
     for($i = 1; $i <=5; $i++ ){
-        array_push($array, $i);
+        array_push(array: $array, values: $i);
     }
 
-    for($i = 0; $i < count($array); $i++){
+    for($i = 0; $i < count(value: $array); $i++){
         echo "<p>$array[$i]</p>";
     }
 
@@ -30,15 +30,15 @@
 
     $X = array (10, 20, 30, 40, 50,60);
 
-    $longitud_array = count($X);
+    $longitud_array = count(value: $X);
 
     echo "<p>La longitud del array es de ". $longitud_array."</p>";
 
     unset($X[0]);
 
-    $X = array_values($X);
+    $X = array_values(array: $X);
 
-    $longitud_array = count($X);
+    $longitud_array = count(value: $X);
 
     echo "<p>La longitud del array es de ". $longitud_array."</p>";
 
@@ -50,10 +50,10 @@
     Si tenim [“hola”, “Php”, “Html”] retornarà true si preguntem per “h” però fals si preguntem per “l”.
     */
 
-    function caracterPalabra($array, $caracter){
+    function caracterPalabra($array, $caracter): bool{
 
         $isCaracter = true;
-        $caracter = strtolower($caracter);
+        $caracter = strtolower(string: $caracter);
 
         foreach($array as $palabra){
 
@@ -68,7 +68,7 @@
     $array = ["Hola", "Aloha", "Ola"];
     $caracter = 'o';
 
-    echo caracterPalabra($array, $caracter);
+    echo caracterPalabra(array: $array, caracter: $caracter);
 
 
 

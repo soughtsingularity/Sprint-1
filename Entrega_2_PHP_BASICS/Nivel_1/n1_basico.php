@@ -19,7 +19,7 @@
     $string = "Soy un string";
     $boolean = false;
 
-    define("NOM", "Ramón Martos OLiver");
+    define("NOM", value: "Ramón Martos OLiver");
 
     echo "<h1>".NOM."</h1>";
 
@@ -37,11 +37,11 @@
 
     echo "<h1>".$saludo."</h1>";
 
-    echo "<h2>".strtoupper($saludo)."</h2>";
+    echo "<h2>".strtoupper(string: $saludo)."</h2>";
 
     echo "<h2>" .strlen(string: $saludo). "</h2>";
 
-    echo "<h2>" .strrev($saludo). "</h2>";
+    echo "<h2>" .strrev(string: $saludo). "</h2>";
 
     $string2 = " Aquest es el curs de PHP";
 
@@ -152,7 +152,7 @@
     echo "<h1>Ex 4 </h1>";
 
 
-    function contador(int $numero = 10, int $paso = 1){
+    function contador(int $numero = 10, int $paso = 1): string{
         echo "Contando hasta ".$numero." en itervalos de ".$paso;
         echo "<br>";
         $resultado = "";
@@ -179,7 +179,7 @@
     echo "<h1>Ex 5 </h1>";
 
 
-    function gradoEstudiante(float $nota){
+    function gradoEstudiante(float $nota): string{
 
         if($nota >= 60){
             $grado = "Primera division";
@@ -202,9 +202,9 @@
 
     echo "<h1>Ex 6 </h1>";
 
-    function isBitten(){
+    function isBitten(): string{
 
-        return rand(0,1) ? "Charlie no te ha mordido" : "Charlie te ha moridido";
+        return rand(min: 0,max: 1) ? "Charlie no te ha mordido" : "Charlie te ha moridido";
     }
 
     echo isBitten();
