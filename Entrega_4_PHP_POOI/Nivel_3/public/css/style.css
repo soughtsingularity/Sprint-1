@@ -1,0 +1,116 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+}
+
+#container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Estilos para el encabezado que contiene el nav y el formulario */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+}
+
+#nav-bar ul {
+    display: flex;
+    list-style: none;
+}
+
+#nav-bar ul li {
+    margin-right: 20px;
+}
+
+#nav-bar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#nav-bar ul li a:hover {
+    text-decoration: underline;
+}
+
+#header form {
+    display: flex;
+}
+
+#header form input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#header form button {
+    padding: 6px 12px;
+    margin-left: 5px;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+#header form button:hover {
+    background-color: #f1f1f1;
+}
+
+main {
+    padding: 20px;
+}
+
+main h1, main h2 {
+    margin-bottom: 15px;
+}
+
+main ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    margin-top: 20px;
+}
+
+main ul li {
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    width: 200px;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Estilos para la tarjeta de una sola película */
+.movie-card {
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    width: 400px;
+    margin: 20px auto; /* Centrado horizontalmente */
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #555;
+}
