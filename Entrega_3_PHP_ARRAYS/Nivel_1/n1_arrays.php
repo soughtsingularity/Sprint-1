@@ -52,17 +52,17 @@
 
     function caracterPalabra($array, $caracter){
 
+        $isCaracter = true;
         $caracter = strtolower($caracter);
 
-            foreach($array as $palabra){
+        foreach($array as $palabra){
 
-                if(strpos(strtolower($palabra), $caracter) === false){
-                    return false;
-                }
-            
+            if(strpos(strtolower(string: $palabra), $caracter) === false){
+                $isCaracter = false;
+            }
         }
 
-        return true;
+        return $isCaracter;
     }
 
     $array = ["Hola", "Aloha", "Ola"];
