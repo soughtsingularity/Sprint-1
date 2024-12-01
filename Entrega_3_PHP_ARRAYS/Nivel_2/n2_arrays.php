@@ -12,8 +12,7 @@
  $array1 = [1,2.4,3,4,5.6,7];
  $array2 = [3,7.4,4,6,8.6,9];
 
- print_r(value: array_intersect(array: $array1, arrays: $array2)) ;
-
+ print_r(array_intersect($array1, $array2));
 //$array3 = array_intersect($array1,$array2);
 //print_r(value: $array3);
 

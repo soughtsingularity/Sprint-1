@@ -18,7 +18,7 @@ use App\TDD;
 
 
 
-class TDD_Test extends TestCase{
+class TDDTest extends TestCase{
 
     public function testFirstDivision(): void{
 

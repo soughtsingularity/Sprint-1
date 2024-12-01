@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,13 +12,18 @@
 
     <?php
 
+
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+
     // Ejercicio 1
     // Crea un array, afegeix-li 5 nombres enters i després mostrals per pantalla d’un en un.
 
     $array = [];
 
-    for($i = 1; $i <=5; $i++ ){
-        array_push(array: $array, values: $i);
+    for($i = 1; $i <= 5; $i++ ){
+        array_push($array, $i);
     }
 
     for($i = 0; $i < count(value: $array); $i++){

@@ -14,7 +14,7 @@
 namespace App;
 
 class TDD{
-    function calcDivision(float $nota){
+    function calcDivision(float $nota): string{
 
         if($nota >= 60){
             $grado = "Primera division";

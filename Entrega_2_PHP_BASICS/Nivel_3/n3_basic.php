@@ -1,5 +1,11 @@
 <?php
 
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+
 /*
 El sedàs d'Eratòstenes és un algoritme pensat per a trobar nombres primers dins d'un interval donat. 
 Basant-te en la informació de l'enllaç adjunt, implementa el sedàs d'Eratòstenes dins d'una funció, 
@@ -62,14 +68,11 @@ function listNums($number): array{
 
     $numbers = [];
 
-    for($i = 2; $i <=$number; $i++){
-
-        array_push(array: $numbers,values: $i);
-
+    for($i = 2; $i <= $number; $i++){
+        array_push($numbers, $i);
     }
 
     return $numbers;
-
 }
 
 function findPrime($number): array{
