@@ -14,38 +14,27 @@ echo "\n";
 
 echo "<h1>Ejercicio 2</h1>\n";
 
-$alumno1 = [
-    'nota1' => 4,
-    'nota2' => 5,
-    'nota3' => 5,
-    'nota4' => 7,
-    'nota5' => 3
-];
+$alumno1 = [4,5,5,7, 3];
 
-$alumno2 = [
-    'nota1' => 5,
-    'nota2' => 3,
-    'nota3' => 8,
-    'nota4' => 5,
-    'nota5' => 7
-];
+$alumno2 = [5,3,8,5,7];
 
-$alumno3 = [
-    'nota1' => 7,
-    'nota2' => 8,
-    'nota3' => 7,
-    'nota4' => 5,
-    'nota5' => 9
-];
+$alumno3 = [ 7, 8, 7, 5, 9];
 
-function calcAverage(... $arrays): string{
+$alumnos = [$alumno1, $alumno2, $alumno3];
+
+function showAverage($alumnos){
+
+    $average = calcAverage($alumnos);
+
+    return "La media de la clase es: ". number_format(num: $average,decimals: 2)."\n";
+}
+    
+function calcAverage($arrays): string{
 
     $totalSum = 0;
     $average = 0;
     $totalCounter = 0;
-    $average = 0;
-    $result = "";
-
+    
     foreach($arrays as $index => $array){
         $particularSum = 0;
         $counter = 0;
@@ -57,17 +46,16 @@ function calcAverage(... $arrays): string{
         $average = $particularSum/$counter;
         $totalCounter += $counter;
         $totalSum += $particularSum;
-        $result .= "La media total del alumno ".($index +1)." es: ". number_format(num: $average, decimals: 2)."\n";
+        echo "La media total del alumno ".($index +1)." es: ". number_format(num: $average, decimals: 2)."\n";
     }
 
     $average = $totalSum/$totalCounter;
-    $result .= "La media de la clase es: ". number_format(num: $average,decimals: 2)."\n";
 
-    return $result;
+    return $average;
 
 }
 
-$result = calcAverage($alumno1, $alumno2, $alumno3);
+$result = showAverage(alumnos: $alumnos);
 echo $result;
 
 
