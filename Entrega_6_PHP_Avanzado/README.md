@@ -28,6 +28,12 @@ Instal.la Composer al teu ordinador. Dona un cop d'ull a alguna llibreria que t'
 ### Ejercicio 2
 Crea un programa que faci servir aquesta llibreria.
 
+``He decidido usar la librería brick/math. El programa que haré servirá para calcular cuantas vidas se tardaría en llegar a un planeta del sistema solar 
+si pudiéramos llegar a él andando. Primero calcularé los pasos hasta el planeta, basándome en que según ChatGpt cada paso tiene 40cm y la distancia en km 
+hasta el planeta; acto seguido calcularé el número de pasos que una persona moderadamente activa, que según ChatGPT da unos 5000 pasos añ día, da a lo 
+largo de su vida, tomando como media unos 80 años. Con todo esto el programa mostrará cuantas vidas nos harían falta para llegar a un planeta del sistema solar
+andando.``
+
 # Proyecto PHP Básico
 
 ## 💻 Tecnologías Utilizadas
