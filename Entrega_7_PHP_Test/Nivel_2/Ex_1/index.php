@@ -8,7 +8,8 @@ Programa un DataProvider per a la classe Test de l’exercici 1 del nivell anter
 
 
 
-include "../../../Entrega_7_PHP_Test/Nivel_1/Ex_1_NumberChecker/src/NumberChecker.php";
+//include "../../../Entrega_7_PHP_Test/Nivel_1/Ex_1_NumberChecker/src/NumberChecker.php";
+include "classes/NumberChecker.php";
 
 $evenNumber = new NumberChecker(number: 3);
 $oddNumber = new NumberChecker(number: 27);
