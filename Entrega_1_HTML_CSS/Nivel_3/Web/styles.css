@@ -150,6 +150,7 @@ li:hover span{
     z-index: 10;
     position: absolute;
     display: grid;
+    justify-content: center;
 }
 
 #sub_container_1_2 p{

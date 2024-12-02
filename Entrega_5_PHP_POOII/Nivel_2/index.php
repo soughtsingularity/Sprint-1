@@ -7,12 +7,6 @@ error_reporting(E_ALL);
 include_once "classes/Triangle.php";
 include_once "classes/Rectangle.php";
 
-/*
-Escriu un programa que defineixi una classe Shape amb un constructor que rebi com a paràmetres l'ample i alt.
-Defineix dues subclasses; Triangle i Rectangle que heretin de Shape i que calculin respectivament
-l'àrea de la forma area().
-*/
-
 $triangle1 = new Triangle(width: 3, height: 4);
 $rectangle1 = new Rectangle(width: 4, height: 3);
 

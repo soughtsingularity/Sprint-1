@@ -1,12 +1,7 @@
 <?php
 
-/*
-Programa un DataProvider per a la classe Test de l’exercici 2 del nivell 1 i fes-lo servir. 
-*/
-
 use App\TDD;
 
-//include "../../../Entrega_7_PHP_Test/Nivel_1/Ex_2_TDD/src/TDD.php";
 include "classes/TDD.php";
 
 $notaPrimeraDivision = 60;

@@ -1,20 +1,11 @@
 <?php
 
-/* Ejercicio 1
-    Crea un programa que contingui dos arrays de nombres enters/floats. Un cop creats, mostra per pantalla el resultat de:
-
-    La intersecció dels dos arrays (nombres en comú)
-    La mescla dels dos arrays.
- */
-
  echo "<h1>Ejercicio 1</h1>\n";
 
  $array1 = [1,2.4,3,4,5.6,7];
  $array2 = [3,7.4,4,6,8.6,9];
 
  print_r(array_intersect($array1, $array2));
-//$array3 = array_intersect($array1,$array2);
-//print_r(value: $array3);
 
 $array4 = array_merge($array1, $array2);
 print_r(value: $array4);
@@ -22,14 +13,6 @@ print_r(value: $array4);
 echo "\n";
 
 echo "<h1>Ejercicio 2</h1>\n";
-
-/* Ejercicio 1
-Crea un programa que llisti les notes dels/les alumnes d’una classe. 
-Per això haurem d’utilitzar un array associatiu on la clau serà el nom de cada alumne. Cada alumne tindrà 5 notes (valorades del 0 al 10).
-
-A més, crea una funció que, donades les notes de tots els/les alumnes, ens mostri tant la mitjana de la nota de cada alumne, 
-com la nota mitjana de la classe sencera.
-*/
 
 $alumno1 = [
     'nota1' => 4,

@@ -22,8 +22,6 @@ html, body {
     padding: 10px;
 }
 
-/*Container 1 */
-
 #container_1{
     width: 80%;
     max-width: 1200px;     
@@ -52,8 +50,6 @@ html, body {
 #box_4{
     width: 100%;
 }
-
-/*Container 2 */
 
 #container_2{
     width: 80%;
@@ -99,8 +95,6 @@ html, body {
 
 }
 
-
-/*Container 3 */
 
 #container_3{
     width: 80%;
