@@ -22,7 +22,7 @@ $alumno3 = [ 7, 8, 7, 5, 9];
 
 $alumnos = [$alumno1, $alumno2, $alumno3];
 
-function showAverage($alumnos){
+function showAverage($alumnos): string{
 
     $average = calcAverage($alumnos);
 
