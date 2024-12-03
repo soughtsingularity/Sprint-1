@@ -24,7 +24,8 @@ Necessitem crear un petit software per a tractament d’informació en una bibli
 - Un autor/autora
 - Un ISBN
 - Un gènere, que pot ser: Aventures, Ciència-ficció, Conte, Novel·la Policial, Paranormal, Distopia, Fantàstic.
-núm. de pàgines.
+- núm. de pàgines.
+
 Necessitem emmagatzemar el conjunt de llibres i tenir mètodes que:
 
 Afegeixin, esborrin i modifiquin un llibre de la llibreria.

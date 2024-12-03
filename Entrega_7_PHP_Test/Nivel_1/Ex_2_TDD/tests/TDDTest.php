@@ -5,55 +5,74 @@ namespace Tests;
 use PHPUnit\Framework\TestCase;
 use App\TDD;
 
-/* Exercici 5
-    Escriure una funció per verificar el grau d'un/a estudiant d'acord amb la nota.
-
-    Condicions:
-
-    Si la nota és 60% o més, el grau hauria de ser Primera Divisió.
-    Si la nota està entre 45% i 59%, el grau hauria de ser Segona Divisió.
-    Si la nota està entre 33% to 44%, el grau hauria de ser Tercera Divisió.
-    Si la nota és menor a 33%, l'estudiant reprovarà.
-*/ 
-
-
-
 class TDDTest extends TestCase{
 
-    public function testFirstDivision(): void{
+    /**
+     * @dataProvider notas
+     */
+
+    public function testFirstDivision($notas): void{
 
         $calc = new TDD();
 
-        $grade = $calc->calcDivision(nota: 68);
+        $grade = $calc->calcDivision($notas);
 
         $this->assertEquals("Primera division", $grade);
     }
 
-    public function testSecondDivision(): void{
+    /**
+     * @dataProvider notas
+     */
+
+    public function testSecondDivision($notas): void{
 
         $calc = new TDD();
 
-        $grade = $calc->calcDivision(nota: 55);
+        $grade = $calc->calcDivision($notas);
 
         $this->assertEquals("Segunda division", $grade);
     }
 
-    public function testThirdDivision(): void{
+    /**
+     * @dataProvider notas
+     */
+
+    public function testThirdDivision($notas): void{
 
         $calc = new TDD();
 
-        $grade = $calc->calcDivision(nota: 39);
+        $grade = $calc->calcDivision($notas);
 
         $this->assertEquals("Tercera division", $grade);
     }
 
-    public function testNoDivision(): void{
+    /**
+     * @dataProvider notas
+     */
+
+    public function testNoDivision($notas): void{
 
         $calc = new TDD();
 
-        $grade = $calc->calcDivision(nota: 18);
+        $grade = $calc->calcDivision($notas);
 
         $this->assertEquals("Sin division", $grade);
+    }
+
+    public function notas(){
+
+        return [
+
+            [12],
+            [23],
+            [34],
+            [45],
+            [55],
+            [69],
+            [78],
+            [85],
+            [98],
+        ];
     }
 }
 
