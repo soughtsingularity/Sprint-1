@@ -2,29 +2,17 @@
 
 echo "<h1>Ejercicio 1</h1>\n";
 
-function payForCall($duration): string{
+function payForCall(int|float $duration): string{
 
-    $counter = 0;
+    define('TIEMPO_BASE', 3);
+    define('PRECIO_BASE', 10);
+    $diferencia = $duration - TIEMPO_BASE;
 
-    if($duration <= 3){
 
-        return "El coste total de la llamada es de 10 céntimos";
-
-    }else{
-        for($i=3; $i < $duration; $i++){
-            $counter ++;
-        }
-
-        $cost = 10 + $counter;
-
-        
-    }
-
-    return "<p>El coste total de la llamada es de ".$cost. " céntimos</p>\n";
-
+    return ($duration <= 3) ? "La llamada cuesta 10 centimos" : "La llamada cuesta ".(PRECIO_BASE + ($diferencia * 5))." centimos";
 }
 
-echo payForCall(duration: 13);
+echo payForCall(duration: 4);
 echo "\n";
 
 echo "<h1>Ejercicio 2</h1>\n";
