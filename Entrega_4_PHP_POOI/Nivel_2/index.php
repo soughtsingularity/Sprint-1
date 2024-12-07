@@ -2,26 +2,30 @@
 
 require 'classes/PokerDice.php';
 
-$dice = new PokerDice;
-$dice1 = new PokerDice;
-$dice2 = new PokerDice;
-$dice3 = new PokerDice;
-$dice4 = new PokerDice;
-$dice5 = new PokerDice;
+$dices = [];
 
+for($i = 0; $i <5 ; $i++){
+    $dices [] = new Pokerdice();
+}
 
-function throwDices(...$dices): array{
+function rollDices($dices): array{
 
     $result = [];
 
     foreach($dices as $dice){
-        $throw = $dice->throw();
-        $shape = $dice->shapeName($throw);
-        $result [] = $shape;
+        $dice->roll();
+        echo implode(",", $dice->getShapes()). PHP_EOL;
+        $result [] = $dice->shapeName();
+
     }
+
+    PokerDice::incrementTotalRolls();
 
     return $result;
 }
 
-$result = throwDices($dice1, $dice2, $dice3, $dice4, $dice5);
-print_r( value: $result);
+$result = rollDices($dices);
+
+echo "Resultados de la tirada: " . implode(", ", $result) . PHP_EOL;
+
+echo "Número total de tiradas: " . PokerDice::getTotalRolls() . PHP_EOL;

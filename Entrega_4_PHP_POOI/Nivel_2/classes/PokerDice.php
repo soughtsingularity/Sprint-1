@@ -2,6 +2,9 @@
 
 class PokerDice{
 
+    private static $totalRolls = 0;
+    private $theRoll;
+
     private $shapes = [
         1 => "As", 
         2 => "K", 
@@ -10,17 +13,24 @@ class PokerDice{
         5 => "7", 
         6 => "8"];
 
-    public function throw (): int{
-
-        return rand(min: 1,max: 6);
+    public function roll (): void{
+        $this->theRoll = rand(1,6);
     }
 
-    public function shapeName($throw): string{
+    public function getShapes(): array{
+        return $this->shapes;
+    }
 
-        foreach($this->shapes as $key => $value){
-            if($throw == $key){
-                return $value;
-            }
-        }
+    public function shapeName(): string{
+
+        return $this->shapes[$this->theRoll];
+    }
+
+    public static function incrementTotalRolls(): void {
+        self::$totalRolls++;
+    }
+
+    public static function getTotalRolls(): int {
+        return self::$totalRolls;
     }
 }
