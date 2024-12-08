@@ -4,8 +4,14 @@ include_once 'Shape.php';
 
 final class Triangle extends Shape{
 
+    protected $height;
+    protected $width;
+
     public function __construct(float|int $width, float|int $height) {
-        parent::__construct($width, $height);
+
+        $this->height = $height;
+        $this->width = $width;
+        
     }
 
 

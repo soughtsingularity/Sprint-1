@@ -1,12 +1,18 @@
-<?php
+<?php 
 
-/* Exeercici 3
-   Seguint l’exercici anterior, imagina com ampliaries l’estructura que has creat per representar un Cercle i el seu corresponent càlcul d’àrea.
-*/
 include_once 'classes/Cercle.php';
+include_once 'classes/Rectangle.php';
+include_once 'classes/Triangle.php';
 
-$cercle = new Cercle(radius: 3);
 
-echo "El area del circulo es de:\n";
+$rectangle = new Rectangle(width: 3,height: 4);
+$triangle = new Triangle(width: 3,height: 4);
+$cercle = new Cercle(radius: 4);
 
-echo $cercle->calculateArea() . " cm2 \n";
+$areaRec = $rectangle->calculateArea();
+$areaTri = $triangle->calculateArea();
+$areaCerc = $cercle->calculateArea();
+
+echo "El area del rectángulo es de: ".$areaRec."cm2".PHP_EOL;
+echo "El area del triángulo es de: ".$areaTri."cm2".PHP_EOL;
+echo "El area del círculo es de: ".$areaCerc."cm2".PHP_EOL;
