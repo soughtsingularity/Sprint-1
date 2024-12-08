@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,43 +9,41 @@
 
     <?php
 
-
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
 
     $array = [];
 
-    for($i = 1; $i <= 5; $i++ ){
+    for ($i = 1; $i <= 5; $i++) {
         array_push($array, $i);
     }
 
-    for($i = 0; $i < count(value: $array); $i++){
+    for ($i = 0; $i < count($array); $i++) {
         echo "<p>$array[$i]</p>";
     }
 
-    $X = array (10, 20, 30, 40, 50,60);
+    $X = [10, 20, 30, 40, 50, 60];
 
-    $longitud_array = count(value: $X);
+    $longitud_array = count($X);
 
-    echo "<p>La longitud del array es de ". $longitud_array."</p>";
+    echo "<p>La longitud del array es de " . $longitud_array . "</p>";
 
     unset($X[0]);
 
-    $X = array_values(array: $X);
+    $X = array_values($X);
 
-    $longitud_array = count(value: $X);
+    $longitud_array = count($X);
 
-    echo "<p>La longitud del array es de ". $longitud_array."</p>";
+    echo "<p>La longitud del array es de " . $longitud_array . "</p>";
 
-    function caracterPalabra($array, $caracter): bool{
-
+    function caracterPalabra($array, $caracter): bool 
+    {
         $isCaracter = true;
-        $caracter = strtolower(string: $caracter);
+        $caracter = strtolower($caracter);
 
-        foreach($array as $palabra){
-
-            if(strpos(strtolower(string: $palabra), $caracter) === false){
+        foreach ($array as $palabra) {
+            if (strpos(strtolower($palabra), $caracter) === false) {
                 $isCaracter = false;
             }
         }
@@ -59,7 +54,7 @@
     $array = ["Hola", "Aloha", "Ola"];
     $caracter = 'o';
 
-    echo caracterPalabra(array: $array, caracter: $caracter);
+    echo caracterPalabra($array, $caracter);
 
     $yo = [
         "nombre" => "Ramon",
@@ -70,7 +65,7 @@
 
     echo "<p>" . $yo["nombre"] . "</p>";
 
-?>
-    
+    ?>
+
 </body>
 </html>

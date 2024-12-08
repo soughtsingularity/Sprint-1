@@ -1,9 +1,5 @@
 <?php
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 require 'vendor/autoload.php';
 include_once 'classes/Planet.php';
 require 'controller/ControllerGoingToPlanet.php';
@@ -20,12 +16,11 @@ $neptune = new Planet(name: "Neptune", distanceToEarth: 4351400000);
 
 $planets = [$mercury, $venus, $mars, $jupiter, $saturn, $uranus, $neptune];
 
-foreach($planets as $planet){
+foreach ($planets as $planet) {
     $distanceToPlanet = $planet->getDistanceToEarth();
-    echo "<p>The distance to".$planet->getName()." is ".$distanceToPlanet." km</p>\n";
+    echo "<p>The distance to " . $planet->getName() . " is " . $distanceToPlanet . " km</p>\n";
     $distanceInSteps = $ControllerGoingToPlanet->calcDistanceInSteps(planet: $planet);
-    echo "<p>You need to walk ".$distanceInSteps." steps to reach ".$planet->getName()."</p>\n";
+    echo "<p>You need to walk " . $distanceInSteps . " steps to reach " . $planet->getName() . "</p>\n";
     $lifesToGo = $ControllerGoingToPlanet->timeToGo(distanceToPlanetSteps: $distanceInSteps);
-    echo "<p>You need ".$lifesToGo." lifes to reach ".$planet->getName()."</p>\n";
-    
+    echo "<p>You need " . $lifesToGo . " lifes to reach " . $planet->getName() . "</p>\n";
 }

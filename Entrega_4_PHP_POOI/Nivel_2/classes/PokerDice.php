@@ -1,6 +1,6 @@
 <?php
-
-class PokerDice{
+class PokerDice
+{
 
     private static $totalRolls = 0;
     private $theRoll;
@@ -12,25 +12,29 @@ class PokerDice{
         4 => "J", 
         5 => "7", 
         6 => "8"];
-
-    public function roll (): void{
-        $this->theRoll = rand(1,6);
+    public function roll(): void
+    {
+        $this->theRoll = rand(min: 1, max: 6);
     }
 
-    public function getShapes(): array{
+    public function getShapes(): array
+    {
         return $this->shapes;
     }
 
-    public function shapeName(): string{
+    public function shapeName(): string
+    {
 
         return $this->shapes[$this->theRoll];
     }
 
-    public static function incrementTotalRolls(): void {
+    public static function incrementTotalRolls(): void
+    {
         self::$totalRolls++;
     }
 
-    public static function getTotalRolls(): int {
+    public static function getTotalRolls(): int
+    {
         return self::$totalRolls;
     }
 }

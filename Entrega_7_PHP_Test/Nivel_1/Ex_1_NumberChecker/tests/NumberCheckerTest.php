@@ -3,13 +3,15 @@
 use PHPUnit\Framework\TestCase;
 use App\NumberChecker;
 
-class NumberCHeckerTest extends TestCase{
+class NumberCHeckerTest extends TestCase
+{
 
     /** 
      * @dataProvider numbers
     */
 
-    public function testIsEvenOddNumber($numbers): void{
+    public function testIsEvenOddNumber($numbers): void
+    {
         $numberChecker = new NumberChecker($numbers);
         $this->assertFalse($numberChecker->isEven());
     }
@@ -18,7 +20,8 @@ class NumberCHeckerTest extends TestCase{
      * @dataProvider numbers
     */
 
-    public function testIsEvenEvenNumber($numbers): void{
+    public function testIsEvenEvenNumber($numbers): void
+    {
         $numberchecker = new NumberChecker($numbers);
         $this->assertTrue($numberchecker->isEven());
     }
@@ -27,7 +30,8 @@ class NumberCHeckerTest extends TestCase{
      * @dataProvider numbers
     */
 
-    public function testIsPositiveNegativeNumber($numbers): void{
+    public function testIsPositiveNegativeNumber($numbers): void
+    {
         $numberchecker = new NumberChecker($numbers);
         $this->assertFalse($numberchecker->isPositive());
     }
@@ -36,12 +40,14 @@ class NumberCHeckerTest extends TestCase{
      * @dataProvider numbers
     */
 
-    public function testIsPositivePositiveNumber($numbers): void{
+    public function testIsPositivePositiveNumber($numbers): void
+    {
         $numberchecker = new NumberChecker($numbers);
         $this->assertTrue($numberchecker->isPositive());
     }
 
-    public function numbers(){
+    public function numbers()
+    {
 
         return [
             [1],

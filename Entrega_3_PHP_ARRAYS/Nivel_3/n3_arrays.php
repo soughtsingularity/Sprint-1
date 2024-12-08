@@ -1,39 +1,35 @@
 <?php
 
-$intArray = [3,4,5,6,7];
+$intArray = [3, 4, 5, 6, 7];
 
-$newArray = array_map(callback: function($number): float|int{
+$newArray = array_map(callback: function ($number): float|int {
     return $number ** 3;
 }, array: $intArray);
 
-print_r(value: $newArray);
-
+print_r($newArray);
 
 $stringArray = ["Carlos", "Maria", "Jose", "Eduardo"];
 
-$evenNames = array_filter(array: $stringArray, callback: function($name): bool{
-    return strlen(string: $name) % 2 == 0;
+$evenNames = array_filter(array: $stringArray, callback: function ($name): bool {
+    return strlen($name) % 2 == 0;
 });
 
-print_r(value: $evenNames);
+print_r($evenNames);
 
-$intArray = [1,2,3];
+$intArray = [1, 2, 3];
 
-$primeSum = array_reduce(array: $intArray, callback: function($count,$number): int{
-
-    if($number <=1){
+$primeSum = array_reduce($intArray, function ($count, $number): int {
+    if ($number <= 1) {
         return $count;
     }
 
-    for($i = 2; $i <= sqrt(num: $number); $i++){
-        if($number % $i === 0){
+    for ($i = 2; $i <= sqrt($number); $i++) {
+        if ($number % $i === 0) {
             return $count;
         }
     }
 
     return $count + $number;
+}, 0);
 
-},initial: 0);
-
-echo "La suma de todos los numeros es:".$primeSum."\n";
-
+echo "La suma de todos los numeros es: " . $primeSum . "\n";

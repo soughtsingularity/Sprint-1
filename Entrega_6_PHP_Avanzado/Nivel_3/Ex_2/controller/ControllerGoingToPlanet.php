@@ -7,9 +7,11 @@ use Brick\Math\RoundingMode;
 
 include_once 'classes/Planet.php';
 
-class ControllerGoingToPlanet{
+class ControllerGoingToPlanet
+{
 
-    public function calcDistanceInSteps($planet): BigDecimal {
+    public function calcDistanceInSteps($planet): BigDecimal
+    {
 
         $oneKmToCm = BigDecimal::of(value: '100000');
     
@@ -22,7 +24,8 @@ class ControllerGoingToPlanet{
         return $distanceToPlanetInSteps;
     }
 
-    public function timeToGo($distanceToPlanetSteps): BigDecimal{
+    public function timeToGo($distanceToPlanetSteps): BigDecimal
+    {
 
         $stepsInOneLife = BigDecimal::of('5000')->multipliedBy('365')->multipliedBy('80');
 

@@ -1,6 +1,6 @@
 <?php 
 
-interface ShapeForm{
-    
+interface ShapeForm
+{ 
     public function calculateArea(); 
 }

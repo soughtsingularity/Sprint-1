@@ -1,8 +1,7 @@
 <?php
-
-class Employee{
-
-    private $nombre;
+class Employee
+{
+        private $nombre;
     private $sueldo;
 
     public function __construct($nombre, $sueldo){
@@ -11,7 +10,8 @@ class Employee{
         $this->sueldo = $sueldo;
     }
 
-    public function payTaxes(): string{
+    public function payTaxes(): string
+    {
         echo "<p>$this->nombre</p>";
 
         return ($this->sueldo > 600) ? "Paga impuestos" : "No paga impuestos";

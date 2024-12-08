@@ -16,19 +16,23 @@ class LearningResource
         $this->resourceType = $resourceType;
     }
 
-    public function getName(): string{
+    public function getName(): string
+    {
         return $this->name;
     }
 
-    public function getTopicName(): string{
+    public function getTopicName(): string
+    {
         return $this->topic->value;
     }
 
-    public function getUrl(): string{
+    public function getUrl(): string
+    {
         return $this->url;
     }
 
-    public function getResourceTypeName(): string{
+    public function getResourceTypeName(): string
+    {
         return $this->resourceType->value;
     }
 

@@ -1,7 +1,8 @@
 <?php
 
 include "ShapeForm.php";
-abstract class Shape implements ShapeForm{
+abstract class Shape implements ShapeForm
+{
 
     protected const PI = 3.14;
 

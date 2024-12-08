@@ -2,7 +2,8 @@
 
 include 'traits/Turbo.php';
 
-class Car{
+class Car
+{
     use Turbo;
 
     private $brand;

@@ -2,16 +2,18 @@
 
 namespace App;
 
-class TDD{
-    function calcDivision(float $nota): string{
+class TDD
+{
+    public function calcDivision(float $nota): string
+    {
 
-        if($nota >= 60){
+        if ($nota >= 60) {
             $grado = "Primera division";
-        }else if($nota >=45){
+        } elseif ($nota >= 45) {
             $grado = "Segunda division";
-        }else if($nota >= 33){
+        } elseif ($nota >= 33) {
             $grado = "Tercera division";
-        }else{
+        } else {
             $grado = "Sin division";
         }
 

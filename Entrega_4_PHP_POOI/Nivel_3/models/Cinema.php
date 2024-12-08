@@ -1,6 +1,7 @@
 <?php
 
-class Cinema{
+class Cinema
+{
 
     private $id;
     private $name;
@@ -10,7 +11,8 @@ class Cinema{
 
     private static $nextId = 1;
 
-    public function __construct($name, $city, $movies){
+    public function __construct($name, $city, $movies)
+    {
         $this->id = self::$nextId;
         $this->name = $name;
         $this->city = $city;
@@ -18,19 +20,23 @@ class Cinema{
         self::$nextId++;
     }
 
-    public function getId(): int{
+    public function getId(): int
+    {
         return $this->id;
     }
 
-    public function getName(): string{
+    public function getName(): string
+    {
         return $this->name;
     }
 
-    public function getCity(): string{
+    public function getCity(): string
+    {
         return $this->city;
     }
 
-    public function getMovies(): array{
+    public function getMovies(): array
+    {
         return $this->movies;
     }
 }

@@ -2,7 +2,8 @@
 
 trait Turbo{
 
-    public function boost(): void{
+    public function boost(): void
+    {
         echo "Turbo iniciado";
     }
 }

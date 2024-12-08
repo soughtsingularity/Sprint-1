@@ -24,9 +24,8 @@ $carteleraRenoir = [
     new Film(name: "Schindler's List", duration: 195, director: "Steven Spielberg")
 ];
 
-$cines =[
+$cines = [
     new Cinema(name: "Verdi", city: "Barcelona", movies: $carteleraVerdi),
     new Cinema(name: "Phenomena", city: "Barcelona", movies: $carteleraPhenomena),
     new Cinema(name: "Renoir", city: "Barcelona", movies: $carteleraRenoir)
 ];
-

@@ -1,6 +1,7 @@
 <?php
 
-abstract class Shape{
+abstract class Shape
+{
 
     protected float|int $width;
     protected float|int $height;
@@ -10,11 +11,13 @@ abstract class Shape{
         $this->height = $height;
     }
 
-    public function getWidth(): float|int{
+    public function getWidth(): float|int
+    {
         return $this->width;
     }
 
-    public function getHeight(): float|int{
+    public function getHeight(): float|int
+    {
         return $this->height;
     }
 

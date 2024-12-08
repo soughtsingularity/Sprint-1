@@ -5,13 +5,15 @@ namespace Tests;
 use PHPUnit\Framework\TestCase;
 use App\TDD;
 
-class TDDTest extends TestCase{
+class TDDTest extends TestCase
+{
 
     /**
      * @dataProvider notas
      */
 
-    public function testFirstDivision($notas): void{
+    public function testFirstDivision($notas): void
+    {
 
         $calc = new TDD();
 
@@ -24,7 +26,8 @@ class TDDTest extends TestCase{
      * @dataProvider notas
      */
 
-    public function testSecondDivision($notas): void{
+    public function testSecondDivision($notas): void
+    {
 
         $calc = new TDD();
 
@@ -37,7 +40,8 @@ class TDDTest extends TestCase{
      * @dataProvider notas
      */
 
-    public function testThirdDivision($notas): void{
+    public function testThirdDivision($notas): void
+    {
 
         $calc = new TDD();
 
@@ -50,7 +54,8 @@ class TDDTest extends TestCase{
      * @dataProvider notas
      */
 
-    public function testNoDivision($notas): void{
+    public function testNoDivision($notas): void
+    {
 
         $calc = new TDD();
 
@@ -59,7 +64,8 @@ class TDDTest extends TestCase{
         $this->assertEquals("Sin division", $grade);
     }
 
-    public function notas(){
+    public function notas()
+    {
 
         return [
 
