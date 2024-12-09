@@ -1,0 +1,12 @@
+# Ignorar configuraciones locales de editores
+.vscode/
+
+# Ignorar dependencias de Composer
+vendor/
+
+# Ignorar archivos de PHPUnit
+*.xml
+*.md
+
+# Ignorar caché y archivos temporales
+*.cache
