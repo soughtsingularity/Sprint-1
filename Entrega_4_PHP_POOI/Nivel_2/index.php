@@ -13,6 +13,7 @@ function rollDices($dices): array
     $result = [];
 
     foreach ($dices as $dice) {
+        echo "Este es mi dado: " . $dice->getShapes() . PHP_EOL;
         $dice->roll();
         echo implode(",", $dice->getShapes()) . PHP_EOL;
         $result[] = $dice->shapeName();
