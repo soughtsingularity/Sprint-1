@@ -64,7 +64,7 @@ class TDDTest extends TestCase
         $this->assertEquals("Sin division", $grade);
     }
 
-    public function notas()
+    public static function notas()
     {
 
         return [

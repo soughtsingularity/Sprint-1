@@ -46,7 +46,7 @@ class NumberCHeckerTest extends TestCase
         $this->assertTrue($numberchecker->isPositive());
     }
 
-    public function numbers()
+    public static function numbers()
     {
 
         return [
