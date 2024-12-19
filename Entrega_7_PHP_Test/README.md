@@ -1,7 +1,7 @@
 # Descripción
 Juguem una mica amb una de les llibreries més utilitzades en testing per a PHP, PHPunit.
 
-## ✔️	Nivel 1
+## ✔️ Nivel 1
 
 ### Ejercicio 1
 Donada la classe NumberChecker programa els tests unitaris que facin falta per certificar que el codi font de la classe fa el que ha de fer.
@@ -9,7 +9,7 @@ Donada la classe NumberChecker programa els tests unitaris que facin falta per c
 ### Ejercicio 2
 Practiquem una mica de TDD. Recorda l’exercici 5 del nivell de PHP Bàsics i pensa tests que podries realitzar per provar el seu correcte funcionament. Programa’ls i després ves realitzant el programa a testejar pas a pas segons valides els tests prèviament creats.
 
-## ✔️	Nivel 2
+## ✔️ Nivel 2
 
 ### Ejercicio 1
 Programa un DataProvider per a la classe Test de l’exercici 1 del nivell anterior i fes-lo servir.
@@ -17,7 +17,7 @@ Programa un DataProvider per a la classe Test de l’exercici 1 del nivell anter
 ### Ejercicio 3
 Programa un DataProvider per a la classe Test de l’exercici 2 del nivell 1 i fes-lo servir.
 
-## ✖️ Nivel 3 (En construcción)
+## ✔️ Nivel 3 
 Necessitem crear un petit software per a tractament d’informació en una biblioteca. Per això necessitem representar la informació d’un llibre, que té:
 
 - Un títol
@@ -96,31 +96,18 @@ Podemos ejecutar los test de la siguiente manera:
 ```./vendor/bin/phpunit tests/archivo.php```
 
 archivo.php es el archivo.php alojado en el repositorio que quieras testear, en este caso puede ser:
+
+### Niveles 1 y 2
+
 - NumberCheckerTest.php
 - TDDTest.php
 
-## Para el resto de archivos
+### Nivel 3
 
-### Usando el servidor integrado de PHP
-
-1. Navega al direcorio del proyecto
-
-```cd_tu_repositorio```
-
-2. Inicia el servidor web integrado de PHP:
-
-```php -S localhost:8000```
-
-3. Navega a:
-
-```http://localhost:8000/archivo.php```
-
-archivo.php es el archivo.php alojado en el repositorio que quieras abrir, en este caso puede ser:
-- index.php
-
-### Usando servidor web como Apache o Nginx
-
-1. Asegurate de que tu serviddor web esté en ejecución
-2. Abre tu navegador preferido y navega a la URL donde esté alojado tu proyecto. Por ejemplo:
-
-```http://localhost/tu_repositorio/archivo.php```
+- AddBookControllerTest.php
+- BookTest.php
+- DeleteBookControllerTest.php
+- ModifyBookControllerTest.php
+- ReturnBookControllerTest.php
+- SearchBookControllerTest.php
+- UpdateBookInDataBaseTest.php
