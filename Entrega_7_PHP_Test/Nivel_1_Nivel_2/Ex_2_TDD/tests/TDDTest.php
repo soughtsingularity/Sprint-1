@@ -9,75 +9,29 @@ class TDDTest extends TestCase
 {
 
     /**
-     * @dataProvider notas
-     */
+     * @dataProvider gradeProvider
+    */
 
-    public function testFirstDivision($notas): void
-    {
+    public function testGrade($grade, $expectedMessage){
+        $calcGrade = new TDD();
+        $this->assertEquals($expectedMessage, $calcGrade->calcDIvision($grade));
 
-        $calc = new TDD();
-
-        $grade = $calc->calcDivision($notas);
-
-        $this->assertEquals("Primera division", $grade);
     }
 
-    /**
-     * @dataProvider notas
-     */
-
-    public function testSecondDivision($notas): void
-    {
-
-        $calc = new TDD();
-
-        $grade = $calc->calcDivision($notas);
-
-        $this->assertEquals("Segunda division", $grade);
-    }
-
-    /**
-     * @dataProvider notas
-     */
-
-    public function testThirdDivision($notas): void
-    {
-
-        $calc = new TDD();
-
-        $grade = $calc->calcDivision($notas);
-
-        $this->assertEquals("Tercera division", $grade);
-    }
-
-    /**
-     * @dataProvider notas
-     */
-
-    public function testNoDivision($notas): void
-    {
-
-        $calc = new TDD();
-
-        $grade = $calc->calcDivision($notas);
-
-        $this->assertEquals("Sin division", $grade);
-    }
-
-    public static function notas()
+    public static function gradeProvider()
     {
 
         return [
 
-            [12],
-            [23],
-            [34],
-            [45],
-            [55],
-            [69],
-            [78],
-            [85],
-            [98],
+            [12, "Sin division"],
+            [23, "Sin division"],
+            [34, "Tercera division"],
+            [45, "Segunda division"],
+            [55, "Segunda division"],
+            [69, "Primera division"],
+            [78, "Primera division"],
+            [85, "Primera division"],
+            [98, "Primera division"],
         ];
     }
 }

@@ -3,60 +3,46 @@
 use PHPUnit\Framework\TestCase;
 use App\NumberChecker;
 
-class NumberCHeckerTest extends TestCase
+class NumberCheckerTest extends TestCase
 {
 
-    /** 
-     * @dataProvider numbers
-    */
+    /**
+     * @dataProvider evenOddProvider
+     */
 
-    public function testIsEvenOddNumber($numbers): void
-    {
-        $numberChecker = new NumberChecker($numbers);
-        $this->assertFalse($numberChecker->isEven());
+    public function testIsEven($number, $evenExpected){
+        $numberChecker = new NumberChecker($number);
+        $this->assertEquals($evenExpected, $numberChecker->isEven());
     }
 
-    /** 
-     * @dataProvider numbers
-    */
+    /**
+     * @dataProvider positiveNegativeProvider
+     */
 
-    public function testIsEvenEvenNumber($numbers): void
-    {
-        $numberchecker = new NumberChecker($numbers);
-        $this->assertTrue($numberchecker->isEven());
+    public function testIsPositive($number, $positiveExpected){
+        $numberChecker = new NumberChecker($number);
+        $this->assertEquals($positiveExpected, $numberChecker->isPositive());
     }
 
-    /** 
-     * @dataProvider numbers
-    */
-
-    public function testIsPositiveNegativeNumber($numbers): void
-    {
-        $numberchecker = new NumberChecker($numbers);
-        $this->assertFalse($numberchecker->isPositive());
-    }
-
-    /** 
-     * @dataProvider numbers
-    */
-
-    public function testIsPositivePositiveNumber($numbers): void
-    {
-        $numberchecker = new NumberChecker($numbers);
-        $this->assertTrue($numberchecker->isPositive());
-    }
-
-    public static function numbers()
-    {
+    public static function evenOddProvider(){
 
         return [
-            [1],
-            [2],
-            [123],
-            [400],
-            [345],
-            [45],
-            [2],
+            [1, false],
+            [2, true],
+            [145, false],
+            [400, true]
         ];
     }
+
+    public static function positiveNegativeProvider(){
+
+        return [
+            [1, true],
+            [-450, false],
+            [35, true],
+            [80, true]
+        ];
+    }
+
+
 }
